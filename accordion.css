@@ -1,0 +1,92 @@
+/*custom accordion*/
+#custom-acc .tab:hover {
+background:#c7d474;
+}
+
+#custom-acc .tab {
+position:relative;
+width:100%;
+color:#fff;
+border-top:3px solid #c7d474;
+overflow:hidden;
+background:#0d73a9;
+}
+
+#custom-acc input {
+position:absolute;
+opacity:0;
+z-index:-1;
+}
+
+#custom-acc label,#custom-acc h2 label {
+position:relative;
+display:block;
+padding:0 2em 0 1em;
+font-weight:700;
+line-height:2;
+cursor:pointer;
+color:#fff;
+}
+
+#custom-acc label h2 {
+margin:15px 0 25px;
+font-family:"bree-light",Arial,Helvetica,sans-serif;
+text-align:center;
+color:#fff!important;
+}
+
+#custom-acc h2 label {
+margin:15px 0 25px;
+font-family:"bree-light",Arial,Helvetica,sans-serif;
+text-align:center;
+color:#fff!important;
+}
+
+#custom-acc .tab-content {
+max-height:0;
+overflow:hidden;
+background:#fcfcfc;
+-webkit-transition:max-height .35s;
+-o-transition:max-height .35s;
+transition:max-height .35s;
+padding:0;
+}
+
+#custom-acc .tab-content p {
+margin:1em;
+}
+
+#custom-acc input:checked ~ .tab-content {
+max-height:1000px;
+}
+
+#custom-acc label::after,#custom-acc h2 label::after {
+position:absolute;
+right:0;
+top:0;
+display:block;
+width:3em;
+height:3em;
+line-height:2;
+text-align:center;
+-webkit-transition:all .35s;
+-o-transition:all .35s;
+transition:all .35s;
+color:#fff;
+}
+
+#custom-acc input[type=checkbox] +h2 label::after {
+content:"+";
+color:#fff!important;
+}
+
+#custom-acc input[type=checkbox] + label::after {
+content:"+";
+color:#fff!important;
+}
+
+#custom-acc input[type=checkbox]:checked + label::after {
+transform:rotate(315deg);
+}
+
+/*end of accordion*/
